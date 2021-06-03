@@ -1,0 +1,90 @@
+@import "./mixins";
+
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: #141b25;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 80px auto;
+  padding: 0 30px;
+  @extend .content;
+  @include media(mobile) {
+    margin: 40px 0;
+    width: 90%;
+  }
+}
+
+.containerTop,
+.containerBottom {
+  display: flex;
+  flex-direction: row;
+  @include media(tablet) {
+    flex-direction: column;
+  }
+  @include media(mobile) {
+    flex-direction: column;
+  }
+  justify-content: space-between;
+}
+.containerTop {
+  div {
+    text-align: left;
+    h3 {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    p,
+    ul {
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.7);
+    }
+    ul {
+      list-style: square;
+      li {
+        cursor: pointer;
+      }
+      li:hover {
+        color: rgb(88, 141, 168, 1);
+      }
+    }
+  }
+}
+.containerBottom {
+  align-items: center;
+  text-align: left;
+  p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+.socialIcons {
+  color: rgb(88, 141, 168, 0.6);
+  cursor: pointer;
+  :hover {
+    color: rgb(88, 141, 168, 1);
+  }
+}
+.adress {
+  p {
+    display: flex;
+    // align-items: center;
+    cursor: pointer;
+    &:hover {
+      color: rgb(88, 141, 168, 1);
+    }
+  }
+}
+.contactIcons {
+  color: rgb(88, 141, 168, 1);
+  margin-right: 5px;
+}

@@ -1,0 +1,19 @@
+.category {
+  margin-top: 77px;
+}
+.title {
+  height: fit-content;
+  margin: 0;
+  font-size: 10vw;
+  color: #313b44;
+
+  line-height: 1.2;
+  font-weight: 900;
+  margin-bottom: 50px;
+  span {
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #313b44;
+  }
+}

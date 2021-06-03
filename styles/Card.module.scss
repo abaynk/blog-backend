@@ -1,0 +1,99 @@
+@import "mixins";
+
+.articles {
+  min-height: 100vh;
+  margin: auto;
+  @include media(tablet) {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  @include media(mobile) {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+.card {
+  height: 100vh;
+  display: flex;
+  flex: 1;
+  @include media(tablet) {
+    flex-direction: column !important;
+    margin-bottom: 50px;
+  }
+  @include media(mobile) {
+    flex-direction: column !important;
+    margin-bottom: 50px;
+  }
+  & > div {
+    flex: 0.5;
+  }
+  &:nth-child(odd) {
+    flex-direction: row;
+  }
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+    & > .cardContentContainer {
+      background-color: #313b44 !important;
+      .title {
+        color: #fff;
+      }
+      .description {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+}
+.cardContentContainer {
+  flex: 0.5;
+  flex-direction: column;
+  text-align: left !important;
+  display: flex;
+  justify-content: center;
+}
+.cardContent {
+  padding: 48px;
+
+  @include media(mobile) {
+    padding: 20px;
+  }
+}
+.category,
+.title {
+  margin: 0;
+}
+.category,
+.date,
+.author,
+.category > em {
+  color: #588da8;
+  font-size: 18px;
+
+  @include media(mobile) {
+    font-size: 14px;
+  }
+}
+.description {
+  font-size: 20px;
+
+  @include media(mobile) {
+    font-size: 16px;
+  }
+}
+.title {
+  color: #313b44;
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.4;
+  @include media(laptop) {
+    font-size: 48px;
+  }
+  @include media(tablet) {
+    font-size: 45px;
+  }
+  @include media(mobile) {
+    font-size: 32px;
+  }
+}
+.image {
+  height: 100vh !important;
+}
